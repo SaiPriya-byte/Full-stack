@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +14,48 @@
         <input type="password" name="" class="login-input" id="password" placeholder="Password" required>
         <input type="submit" value="Login"class="login-btn">
     </form>
+    <button class="login-btn" onclick="myfunction()"> Click</button>
     
 </body>
 <script>
-    console.log("Hello");
+
+    function myfunction() {
+        console.error("hello man")
+        console.warn("hello man")
+    }
+    
+    functionmmyfunction() {
+        console.error("hello man")
+        console.warn("hello man")
+    }
+    
+    function Login(event) {
+        event.preventDefault()
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        console.log("Login : "+ " " + password);
+        if (password.length < 5) {
+            alert('password should contains more than 5 letters')
+        } else if (email === "saiminnu@gmail.com" && password === "123456") {
+            alert('Login Success !')
+            API()
+        } else {
+            alert('Invalid Credentials !')
+        }
+        function API() {
+            console.log("called API");
+            try {
+                const response = fetch('https://671b71092c842d92c37fed0c.mockapi.io/ProductsApp/product')
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        API()
+
+        
+    }
+    //console.log("Hello");
     // alert("Hello")
-
-
     let x ="Hi"
     console.log(x);
     x = 30
@@ -39,11 +75,30 @@
     let obj2 = {
         name: "a1";
         loc: "b2";
-        age: "0";
+        age: "300";
         isalive: true
 
     }
-    console.log(obj,obj2);
+    //console.log(obj,obj2);
+    let arr=["a",obj,x,obj2]
+    console.log(arr);
+    let arr2 = [1,2,3,4,5,6];
+    // console.log(arr2);
+    let arr3 = [arr, "sdfhj",arr2];
+    let arr4 = [arr,"sdfhj"arr2];
+    console.log(arr3);
+    console.log(arr4);
+
+    function myfunction() {
+        console.error("hello man")
+        console.warn("hello man")
+    }
+    //myfunction()
+    }
+
+
+
+
 
 </script>
 </html>

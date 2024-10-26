@@ -1,10 +1,14 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-color:#C9D6FF
+    background: #BE93C5;  /* fallback for old browsers */
+      -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
     margin:0px;
     dispaly: flex;
-    justify-content:center;
+    justify-content: center;
     align-item: center;
 
 }
@@ -13,33 +17,49 @@ body{
     background-color:firebrick
     height: 40vh;
     width: 25vw;
-    display: flex
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    box-shadow:box-shadow:box-shadow:
-    12.5px 12.5px 10px rgba(0, 0, 0, 0.35),
-    100px 100px 80px rgba(0, 0, 0, 0.07)
+    box-shadow:
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.35),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
   ;
-  .login-input: focus{
+}
+.login-btn{
     border-radius: 4px;
     padding: 1rem;
-    width: 40%;
+    width: 80%;
     border: 0px;
     outline: none;
-    background: #7F00FF;  /* fallback for old browsers */
+    border-bottom: 2px solid transparent;
+
+
+}
+.login-input: focus{
+  border-bottom: 2px solid 8E2DE2;
+}
+.login-btn{
+  border-radius: 4px;
+  padding: 1rem;
+  width: 40%;
+  outline: none;
+  background: #7F00FF;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 cursor: pointer;
-color: background: #C9D6FF;  /* fallback for old browsers */
+font-weight: bold;
+color:#7F00FF;
+border: 1px solid transparent;
+
+
+}
+.login-btn: hover {
+   background: #C9D6FF;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-border:1px solid tranparent;
-  }
 
-  .login-btn: hover {
-    background: background: #396afc;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-  }
+}
+
+  
